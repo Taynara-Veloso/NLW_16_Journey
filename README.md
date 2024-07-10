@@ -1,6 +1,7 @@
 # React + TypeScript + Vite
 
 ![imagebackground](/public/initialPage.jpg)
+![imagebackground](/public/modal_initial_page.jpg)
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
