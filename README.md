@@ -1,5 +1,7 @@
 # React + TypeScript + Vite
 
+![imagebackground](/public/initialPage.jpg)
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
@@ -30,4 +32,6 @@ export default {
 - Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
 
 Ferramentas que utilizei neste projeto:
+- React.js
 - tailwind
+- Lucide-react
