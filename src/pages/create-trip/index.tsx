@@ -14,7 +14,7 @@ export function CreateTripPage() {
     'taynarasantos1@hotmail.com',
     'augusto.cesar09@hotmail.com',
     'leticiasantos1@gmail.com',
-    'merydaveloso2024@hotmail.com',
+    'aylaMeow@gmail.com',
   ])
   const [isConfirmTripModalOpen, setIsConfirmTripModalOpen] = useState(false)
 

@@ -10,3 +10,18 @@
 - tailwind
 - Lucide-react
 - react-router-dom
+
+### truncate
+```css
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+```
+### shrink
+```css
+.shrink-0 {
+  flex-shrink: 0;
+}
+```
