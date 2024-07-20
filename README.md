@@ -1,5 +1,6 @@
 # NLW 16 - Journey
 
+![imagebackground](/public/pageHome.jpg)
 ![imagebackground](/public/initialPage.jpg)
 ![imagebackground](/public/modal_initial_page.jpg)
 ![imagebackground](/public/pageTripDetails.jpg)
