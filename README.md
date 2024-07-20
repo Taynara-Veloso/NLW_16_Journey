@@ -2,6 +2,7 @@
 
 ![imagebackground](/public/initialPage.jpg)
 ![imagebackground](/public/modal_initial_page.jpg)
+![imagebackground](/public/pageTripDetails.jpg)
 
 ### Ferramentas que utilizei neste projeto:
 - React.js
