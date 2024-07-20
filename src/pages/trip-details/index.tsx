@@ -90,6 +90,46 @@ export function TripDetailsPage({
 
           <div className="w-full h-px bg-zinc-800"/>
 
+          <div className="space-y-6">
+            <h2 className="font-semibold text-xl">Convidados</h2>
+            <div className="space-y-5">
+              <div className="flex items-center justify-between gap-4">
+                <div className="space-y-1.5">
+                  <span className="block font-medium text-zinc-100">Taynara Veloso</span>
+                  <span className="block text-sm text-zinc-400 truncate">taynarasantos23@hotmail.com</span>
+                </div>
+                <CircleCheck className="text-lime-400 size-5 shrink-0"/>
+              </div>
+
+              <div className="flex items-center justify-between gap-4">
+                <div className="space-y-1.5">
+                  <span className="block font-medium text-zinc-100">Augusto Cesar</span>
+                  <span className="block text-sm text-zinc-400 truncate">cesarsilva19@hotmail.com</span>
+                </div>
+                <CircleCheck className="text-lime-400 size-5 shrink-0"/>
+              </div>
+
+              <div className="flex items-center justify-between gap-4">
+                <div className="space-y-1.5">
+                  <span className="block font-medium text-zinc-100">Leticia Santos</span>
+                  <span className="block text-sm text-zinc-400 truncate">leticiasantos@hotmail.com</span>
+                </div>
+                <CircleDashed className="text-zinc-400 size-5 shrink-0"/>
+              </div>
+
+              <div className="flex items-center justify-between gap-4">
+                <div className="space-y-1.5">
+                  <span className="block font-medium text-zinc-100">Ayla Meow</span>
+                  <span className="block text-sm text-zinc-400 truncate">aylaMeow@gmail.com</span>
+                </div>
+                <CircleCheck className="text-lime-400 size-5 shrink-0"/>
+              </div>
+            </div>
+            <button type="submit" className="bg-zinc-800 w-full justify-center text-zinc-200 rounded-lg px-5 h-11 font-medium flex items-center gap-2 hover:bg-zinc-900">
+              <UserCog className="size-5"/>
+              Gerenciar convidados
+            </button>
+          </div>
         </div>
       </main>
     </div>
