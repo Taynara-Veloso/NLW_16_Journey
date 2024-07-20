@@ -1,4 +1,4 @@
-import { Calendar, CircleCheck, MapPin, Plus, Settings2  } from "lucide-react";
+import { Calendar, CircleCheck, CircleDashed, Link2, MapPin, Plus, Settings2, UserCog } from "lucide-react";
 
 interface TripDetailsPageProps{
   handleCloseGuestsInput: () => void
@@ -65,6 +65,31 @@ export function TripDetailsPage({
               </div>
             </div>
           </div>
+        </div>
+        <div className="w-80 space-y-6">
+          <div className="space-y-6">
+            <h2 className="font-semibold text-xl">Links importantes</h2>
+            <div className="space-y-5">
+              <div className="flex items-center justify-between gap-4">
+                <div className="space-y-1.5">
+                  <span className="block font-medium text-zinc-100">
+                    Reserva do Hotel
+                  </span>
+                  <a href="#" className="block text-xs text-zinc-400 truncate hover:text-zinc-200">
+                    https://www.trivago.com.br/pt-BR/odr/hot%C3%A9is-taubat%C3%A9-brasil?search=200-60723
+                  </a>
+                </div>
+                <Link2 className="text-zinc-400 size-5 shrink-0 hover:text-lime-400"/>
+              </div>
+            </div>
+            <button type="submit" className="bg-zinc-800 w-full justify-center text-zinc-200 rounded-lg px-5 h-11 font-medium flex items-center gap-2 hover:bg-zinc-900">
+              <Plus className="size-5"/>
+              Cadastrar novo link
+            </button>
+          </div>
+
+          <div className="w-full h-px bg-zinc-800"/>
+
         </div>
       </main>
     </div>
