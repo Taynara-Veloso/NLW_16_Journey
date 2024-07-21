@@ -1,6 +1,7 @@
 import { Calendar, CircleCheck, CircleDashed, Link2, MapPin, Plus, Settings2, UserCog } from "lucide-react";
 import { useState } from "react";
 import { CreateActivityModal } from "./create-activity-modal";
+import { RegisterLinkModal } from "./register-link-modal";
 
 interface TripDetailsPageProps{
   handleCloseGuestsInput: () => void
@@ -10,6 +11,7 @@ export function TripDetailsPage({
   handleCloseGuestsInput,
 }: TripDetailsPageProps) {
   const [isCreateActivityModal, setIsCreateActivityModal] = useState(false)
+  const [isRegisterLinkModal, setIsRegisterLinkModal] = useState(false)
 
   function handleOpenCreateActivityModal() {
     setIsCreateActivityModal(true)
@@ -17,6 +19,14 @@ export function TripDetailsPage({
 
   function handleCloseCreateActivityModal() {
     setIsCreateActivityModal(false)
+  }
+
+  function handleOpenRegisterLinkModal() {
+    setIsRegisterLinkModal(true)
+  }
+
+  function handleCloseRegisterLinkModal() {
+    setIsRegisterLinkModal(false)
   }
 
   return (
@@ -94,7 +104,7 @@ export function TripDetailsPage({
                 <Link2 className="text-zinc-400 size-5 shrink-0 hover:text-lime-400"/>
               </div>
             </div>
-            <button type="submit" className="bg-zinc-800 w-full justify-center text-zinc-200 rounded-lg px-5 h-11 font-medium flex items-center gap-2 hover:bg-zinc-900">
+            <button type="submit" onClick={handleOpenRegisterLinkModal} className="bg-zinc-800 w-full justify-center text-zinc-200 rounded-lg px-5 h-11 font-medium flex items-center gap-2 hover:bg-zinc-900">
               <Plus className="size-5"/>
               Cadastrar novo link
             </button>
@@ -148,6 +158,12 @@ export function TripDetailsPage({
       {isCreateActivityModal && (
         <CreateActivityModal
           handleCloseCreateActivityModal={handleCloseCreateActivityModal}
+        />
+      )}
+
+      {isRegisterLinkModal && (
+        <RegisterLinkModal 
+          handleCloseRegisterLinkModal={handleCloseRegisterLinkModal}
         />
       )}
     </div>
