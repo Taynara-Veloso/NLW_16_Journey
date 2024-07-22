@@ -2,6 +2,7 @@ import { Calendar, CircleCheck, CircleDashed, Link2, MapPin, Plus, Settings2, Us
 import { useState } from "react";
 import { CreateActivityModal } from "./create-activity-modal";
 import { RegisterLinkModal } from "./register-link-modal";
+import { ConfirmParticipationModal } from "./confirm-participation-modal";
 
 interface TripDetailsPageProps{
   handleCloseGuestsInput: () => void
@@ -12,6 +13,7 @@ export function TripDetailsPage({
 }: TripDetailsPageProps) {
   const [isCreateActivityModal, setIsCreateActivityModal] = useState(false)
   const [isRegisterLinkModal, setIsRegisterLinkModal] = useState(false)
+  const [isConfirmParticipationModal, setIsConfirmParticipationModal] = useState(false)
 
   function handleOpenCreateActivityModal() {
     setIsCreateActivityModal(true)
@@ -27,6 +29,14 @@ export function TripDetailsPage({
 
   function handleCloseRegisterLinkModal() {
     setIsRegisterLinkModal(false)
+  }
+
+  function handleOpenConfirmParticipationModal() {
+    setIsConfirmParticipationModal(true)
+  }
+
+  function handleCloseConfirmParticipationModal() {
+    setIsConfirmParticipationModal(false)
   }
 
   return (
@@ -147,7 +157,7 @@ export function TripDetailsPage({
                 <CircleCheck className="text-lime-400 size-5 shrink-0"/>
               </div>
             </div>
-            <button type="submit" className="bg-zinc-800 w-full justify-center text-zinc-200 rounded-lg px-5 h-11 font-medium flex items-center gap-2 hover:bg-zinc-900">
+            <button type="submit" onClick={handleOpenConfirmParticipationModal} className="bg-zinc-800 w-full justify-center text-zinc-200 rounded-lg px-5 h-11 font-medium flex items-center gap-2 hover:bg-zinc-900">
               <UserCog className="size-5"/>
               Gerenciar convidados
             </button>
@@ -164,6 +174,12 @@ export function TripDetailsPage({
       {isRegisterLinkModal && (
         <RegisterLinkModal 
           handleCloseRegisterLinkModal={handleCloseRegisterLinkModal}
+        />
+      )}
+
+      {isConfirmParticipationModal && (
+        <ConfirmParticipationModal 
+          handleCloseConfirmParticipationModal={handleCloseConfirmParticipationModal}
         />
       )}
     </div>
