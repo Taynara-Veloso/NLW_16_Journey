@@ -1,4 +1,5 @@
 import { Mail, User, X } from "lucide-react";
+import { Button } from "../../components/button";
 
 interface ConfirmParticipationModalProps{
   handleCloseConfirmParticipationModal: () => void
@@ -46,11 +47,9 @@ export function ConfirmParticipationModal({
               /> 
             </div>
           </div>
-          <button
-            type="submit" 
-            className="bg-lime-300 w-full justify-center text-lime-950 rounded-lg px-5 h-11 font-medium flex items-center gap-2 hover:bg-lime-400">
+          <Button size="full">
             Confirmar minha presença
-          </button>
+          </Button>
         </form>
       </div>
     </div>
